@@ -21,3 +21,13 @@ When pressing homepage link we display the hompage section and we hide the about
 
 # Step 5 - About page is clickable 
 Duplicate the homepage link code and adjust it to the about page
+
+# Step 6 - Move javascript code to app.js 
+
+
+# Step 7 - We add function to remove of duplicate code
+The function get a linkId and pageToHide and pageToShow
+and show the right page
+
+
+
