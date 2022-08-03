@@ -22,22 +22,39 @@
       </div>
     </nav>
 
-    <div id="home-page" class="d-none">
+
+   <!-- Homepage  -->
+    <div id="home-page" class="d-none" >
       <h1>Home page</h1>
+      <p>This is our home page</p>
     </div>
 
+   <!-- About page  -->
     <div id="about-page" >
       <h1>About page</h1>
+      <p>This is our about page</p>
     </div>
 
     <script>
       const homePageLinkElement = document
         .getElementById('home-page-link')
       console.log(homePageLinkElement);
+
       homePageLinkElement.addEventListener('click', function() {
-           console.log('you clicked the home page link');
+         console.log('you clicked me');
+          document
+            .getElementById('home-page')
+            .classList
+            .remove('d-none');
+
+          document
+            .getElementById('about-page')
+            .classList
+            .add('d-none');
       })
 
+
+       //document.getElementById('about-page-link')
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
