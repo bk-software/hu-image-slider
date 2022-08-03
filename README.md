@@ -29,5 +29,12 @@ Duplicate the homepage link code and adjust it to the about page
 The function get a linkId and pageToHide and pageToShow
 and show the right page
 
+# Step 8 - Use currentPageId variable
+- Hold the shown page in a variable currentPageId
+- Hide the shown page using the variable currentPageId
+- Show the page you want to display i.e about-page
+- change the currentPageId with the new page
+
+
 
 
