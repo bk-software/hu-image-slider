@@ -35,6 +35,11 @@ and show the right page
 - Show the page you want to display i.e about-page
 - change the currentPageId with the new page
 
+# Step 9 - Add news page 
+- add news link
+- add news div (page)
+- call the function makeMenuLinkChangePage with the news page parameters
+
 
 
 

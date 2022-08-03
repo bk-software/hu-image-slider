@@ -15,3 +15,4 @@ function makeMenuLinkChangePage(linkId, pageToShow) {
 
 makeMenuLinkChangePage('home-page-link', 'home-page');
 makeMenuLinkChangePage('about-page-link', 'about-page');
+makeMenuLinkChangePage('news-page-link', 'news-page');
