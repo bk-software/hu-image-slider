@@ -40,6 +40,21 @@ and show the right page
 - add news div (page)
 - call the function makeMenuLinkChangePage with the news page parameters
 
+# Step 10 - Add static image and details
+- Add the HTML for a single image and its details
+- Set the various Bootstrap classes to enable flex, spacing, and font styles
+
+# Step 11 - Add next and previous buttons
+- Add the buttons
+- Add Bootstrap `btn` and `btn-primary` classes to the buttons
+- Create `slider.js`
+    - Array of `pictureData`
+    - Functions to move the current picture forwards/backwards and re-render
+    - Register the functions to the `click` event of the buttons
+
+# Step 12 - Create table view
+- Create a static HTML table
+- Setup the table layout
 
 
 
