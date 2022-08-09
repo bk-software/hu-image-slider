@@ -35,25 +35,23 @@
         <h1 class="text-center">Home page</h1>
         <p class="text-center">This is the home page</p>
 
-        <div class="mb-4">
-            <button id="slider-view" class="btn btn-primary">Slider view</button>
-            <button id="list-view" class="btn btn-primary me-4">List view</button>
-            <button id="prev-image" class="btn btn-primary">Prev</button>
+        <div id="home-toolbar" class="mb-4">
+            <div class="btn-group me-3">
+                <a id="slide-view-selector" href="#" class="btn btn-primary active">Slide view</a>
+                <a id="list-view-selector" href="#" class="btn btn-primary">List view</a>
+              </div>
+            <button id="prev-image" class="btn btn-primary">Previous</button>
             <button id="next-image" class="btn btn-primary">Next</button>
         </div>
 
         <div id="single-image-container" class="d-flex">
             <img style="height: 400px; width: auto; margin-right: 15px;">
             <div class="d-flex flex-column">
-                <h4>Longs Peak, Rocky Mountain National Park</h4>
-                <p>One of the 53 "fourteeners" in Colorado—mountains that exceed 14,000 feet—Longs Peak still manages to
-                    reach higher into the heavens than any other mountain in Rocky Mountain National Park at 14,259
-                    feet. Thousands of climbers set off every year to attempt the summit. Some climbers will try to
-                    reach the peak of every fourteener in the US during their lifetimes—that's 96 different mountains.
-                </p>
+                <h4>Title goes here</h4>
+                <p>Description goes here</p>
                 <p class="small fst-italic text-end">
-                    Credits: <span id="credits">Andrew R. Slaton/Tandem Stills + Motion</span><br>
-                    Featured on Bing Images: <span id="featured-on">2022-07-28</span>
+                    Credits: <span id="credits">Credits go here</span><br>
+                    Featured on Bing Images: <span id="featured-on">Featured on goes here</span>
                 </p>
             </div>
         </div>
@@ -79,6 +77,7 @@
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
     <script src="slider.js"></script>
+    <script src="views.js"></script>
     <script src="app.js"></script>
 </body>
 
