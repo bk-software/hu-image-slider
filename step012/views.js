@@ -13,6 +13,8 @@ let lastContainer = document.querySelector('#single-image-container');
 ['slide', 'list'].forEach(key => {
     const [control, container] = controlsContainers[key];
 
+    const sliderButtons = ['#prev-image', '#next-image'].map(id => document.querySelector(id));
+
     control.addEventListener('click', () => {
         homeToolbar.querySelectorAll('.active').forEach(x => x.classList.remove('active'));
         control.classList.add('active');
@@ -23,9 +25,11 @@ let lastContainer = document.querySelector('#single-image-container');
         switch (key) {
             case 'slide':
                 renderPicture();
+                sliderButtons.forEach(x => x.classList.remove('disabled'));
                 break;
             case 'list':
                 renderTable();
+                sliderButtons.forEach(x => x.classList.add('disabled'));
                 break;
         }
 
