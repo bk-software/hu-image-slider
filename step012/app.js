@@ -1,21 +1,18 @@
-let currentPageId = 'home-page';
+let currentPageId = '#home-page';
 
-const makeMenuLinkChangePage = (linkId, pageToShow) => {
-    const pageLinkElement = document.getElementById(linkId);
+['home', 'about', 'news'].forEach(key => {
+    const linkID = `#${key}-page-link`;
+    const pageID = `#${key}-page`;
+
+    const pageLinkElement = document.querySelector(linkID);
 
     pageLinkElement.addEventListener('click', () => {
-        document.getElementById(currentPageId).classList.add('d-none');
-        document.getElementById(pageToShow).classList.remove('d-none');
+        document.querySelector(currentPageId).classList.add('d-none');
+        document.querySelector(pageID).classList.remove('d-none');
 
-        // if no active link, querySelector will return null
-        document.querySelector('nav .active')?.classList.remove('active');
+        document.querySelector('nav .active').classList.remove('active');
         pageLinkElement.classList.add('active');
 
-        currentPageId = pageToShow;
+        currentPageId = pageID;
     });
-};
-
-makeMenuLinkChangePage('home-page-link', 'home-page');
-makeMenuLinkChangePage('about-page-link', 'about-page');
-makeMenuLinkChangePage('news-page-link', 'news-page');
-
+});
