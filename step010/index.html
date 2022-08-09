@@ -1,65 +1,77 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-  </head>
-  <body>
+    <title>Image viewer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+<body>
 
 
     <nav class="navbar navbar-expand-lg bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Silder</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a id="home-page-link" class="nav-link " aria-current="page" href="#">Home</a>
-            <a id="about-page-link" class="nav-link active" href="#">About</a>
-            <a id="news-page-link" class="nav-link active" href="#">News</a>
-          </div>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Silder</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a id="home-page-link" class="nav-link " aria-current="page" href="#">Home</a>
+                    <a id="about-page-link" class="nav-link" href="#">About</a>
+                    <a id="news-page-link" class="nav-link" href="#">News</a>
+                </div>
+            </div>
         </div>
-      </div>
     </nav>
 
 
-   <!-- Homepage  -->
-    <div id="home-page">
-      <h1>Home page</h1>
-      <p>This is our home page</p>
+    <!-- Homepage  -->
+    <div id="home-page" class="m-3">
+        <h1>Home page</h1>
+        <p>This is our home page</p>
 
-      <div id="single-image-container" class="d-flex">
-        <img style="height: 400px; width: auto;" src="images/OHR.LongsPeak_ROW9098186381_1920x1080.jpg" alt="">
-        <div class="d-flex flex-column">
-            <div class="d-flex justify-content-center">
-                <button>Prev</button>
-                <button>Next</button>
+        <div id="single-image-container" class="d-flex">
+            <img style="height: 400px; width: auto; margin-right: 15px;" src="images/OHR.LongsPeak_ROW9098186381_1920x1080.jpg" alt="">
+            <div class="d-flex flex-column">
+                <h4>Longs Peak, Rocky Mountain National Park</h4>
+                <p>One of the 53 "fourteeners" in Colorado—mountains that exceed 14,000 feet—Longs Peak still manages to
+                    reach higher into the heavens than any other mountain in Rocky Mountain National Park at 14,259
+                    feet. Thousands of climbers set off every year to attempt the summit. Some climbers will try to
+                    reach the peak of every fourteener in the US during their lifetimes—that's 96 different mountains.
+                </p>
+                <p class="small fst-italic text-end flex-grow-1">
+                    Credits: Andrew R. Slaton/Tandem Stills + Motion<br>
+                    Featured on Bing Images: 2022-07-28
+                </p>
+                <div class="mx-auto">
+                    <button>Prev</button>
+                    <button>Next</button>
+                </div>
             </div>
-            <h4>Longs Peak, Rocky Mountain National Park</h4>
-            <p>One of the 53 "fourteeners" in Colorado—mountains that exceed 14,000 feet—Longs Peak still manages to reach higher into the heavens than any other mountain in Rocky Mountain National Park at 14,259 feet. Thousands of climbers set off every year to attempt the summit. Some climbers will try to reach the peak of every fourteener in the US during their lifetimes—that\'s 96 different mountains.</p>
-            <p class="small fst-italic text-end">
-                Credits: Andrew R. Slaton/Tandem Stills + Motion<br>
-                Featured on Bing Images: 2022-07-28
-            </p>
         </div>
     </div>
 
-   <!-- About page  -->
+    <!-- About page  -->
     <div id="about-page" class="d-none">
-      <h1>About page</h1>
-      <p>This is our about page</p>
+        <h1>About page</h1>
+        <p>This is our about page</p>
     </div>
 
-   <!--  news page  -->
+    <!--  news page  -->
     <div id="news-page" class="d-none">
-      <h1>News page</h1>
-      <p>This is our news  page</p>
+        <h1>News page</h1>
+        <p>This is our news page</p>
     </div>
 
-    <script src="app.js"></script> 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-  </body>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>

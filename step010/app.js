@@ -1,17 +1,19 @@
 let currentPageId = 'home-page';
 
-function makeMenuLinkChangePage(linkId, pageToShow) {
-  const pageLinkElement = document.getElementById(linkId);
+const makeMenuLinkChangePage = (linkId, pageToShow) => {
+    const pageLinkElement = document.getElementById(linkId);
 
-  pageLinkElement.addEventListener('click', function () {
-    console.log('you clicked me');
-    document.getElementById(pageToShow).classList.remove('d-none');
+    pageLinkElement.addEventListener('click', () => {
+        document.getElementById(currentPageId).classList.add('d-none');
+        document.getElementById(pageToShow).classList.remove('d-none');
 
-    document.getElementById(currentPageId).classList.add('d-none');
+        // if no active link, querySelector will return null
+        document.querySelector('nav .active')?.classList.remove('active');
+        pageLinkElement.classList.add('active');
 
-    currentPageId = pageToShow;
-  });
-}
+        currentPageId = pageToShow;
+    });
+};
 
 makeMenuLinkChangePage('home-page-link', 'home-page');
 makeMenuLinkChangePage('about-page-link', 'about-page');
