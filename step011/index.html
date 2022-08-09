@@ -21,7 +21,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a id="home-page-link" class="nav-link " aria-current="page" href="#">Home</a>
+                    <a id="home-page-link" class="nav-link active" aria-current="page" href="#">Home</a>
                     <a id="about-page-link" class="nav-link" href="#">About</a>
                     <a id="news-page-link" class="nav-link" href="#">News</a>
                 </div>
@@ -32,10 +32,15 @@
 
     <!-- Homepage  -->
     <div id="home-page" class="m-3">
-        <h1>Home page</h1>
-        <p>This is our home page</p>
+        <h1 class="text-center">Home page</h1>
+        <p class="text-center">This is the home page</p>
 
-        <div id="single-image-container" class="d-flex">
+        <div>
+            <button id="prev-image" class="btn btn-primary">Prev</button>
+            <button id="next-image" class="btn btn-primary">Next</button>
+        </div>
+
+        <div id="single-image-container" class="d-flex mt-4">
             <img style="height: 400px; width: auto; margin-right: 15px;">
             <div class="d-flex flex-column">
                 <h4>Longs Peak, Rocky Mountain National Park</h4>
@@ -44,14 +49,10 @@
                     feet. Thousands of climbers set off every year to attempt the summit. Some climbers will try to
                     reach the peak of every fourteener in the US during their lifetimes—that's 96 different mountains.
                 </p>
-                <p class="small fst-italic text-end flex-grow-1">
+                <p class="small fst-italic text-end">
                     Credits: <span id="credits">Andrew R. Slaton/Tandem Stills + Motion</span><br>
                     Featured on Bing Images: <span id="featured-on">2022-07-28</span>
                 </p>
-                <div class="mx-auto">
-                    <button id="prev-image">Prev</button>
-                    <button id="next-image">Next</button>
-                </div>
             </div>
         </div>
     </div>
