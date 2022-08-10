@@ -1,6 +1,6 @@
 let currentPageId = 'home-page';
 
-function showPage(pageIdToShow) {
+function showPageByPageId(pageIdToShow) {
   console.log('you clicked me');
   if (currentPageId == pageIdToShow) {
     return;
@@ -20,7 +20,7 @@ function showPage(pageIdToShow) {
 function makeMenuLinkChangePage(linkId, pageToShow) {
   const pageLinkElement = document.getElementById(linkId);
   pageLinkElement.addEventListener('click', function () {
-    showPage(pageToShow);
+    showPageByPageId(pageToShow);
   });
 }
 
