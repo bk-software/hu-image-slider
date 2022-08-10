@@ -5,15 +5,17 @@ const imagesArray = [
   'OHR.SpiralHill_ROW7328923046_1920x1080.jpg',
 ];
 
-function prevImage() {
-  console.log('You press prev image');
-  const imageURL = 'images/' + imagesArray[0];
+function renderImage(imageNumber) {
+  const imageURL = 'images/' + imagesArray[imageNumber];
   document.getElementById('slider-image').src = imageURL;
 }
 
+function prevImage() {
+  renderImage(0);
+}
+
 function nextImage() {
-  const imageURL = 'images/' + imagesArray[1];
-  document.getElementById('slider-image').src = imageURL;
+  renderImage(1);
 }
 
 document.getElementById('prev').addEventListener('click', prevImage);
