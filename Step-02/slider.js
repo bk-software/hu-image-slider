@@ -1,15 +1,33 @@
+//Array of Objects
 const imagesArray = [
-  'OHR.HickmanBridge_ROW9566895207_1920x1080.jpg',
-  'OHR.LongsPeak_ROW9098186381_1920x1080.jpg',
-  'OHR.NoctilucentClouds_ROW9144099035_1920x1080.jpg',
-  'OHR.SpiralHill_ROW7328923046_1920x1080.jpg',
+  {
+    imageURL: 'OHR.HickmanBridge_ROW9566895207_1920x1080.jpg',
+    title: 'Image 1 title',
+  },
+  {
+    imageURL: 'OHR.LongsPeak_ROW9098186381_1920x1080.jpg',
+    title: 'Image 2 title',
+  },
+  {
+    imageURL: 'OHR.NoctilucentClouds_ROW9144099035_1920x1080.jpg',
+    title: 'Image 3 title',
+  },
+  {
+    imageURL: 'OHR.SpiralHill_ROW7328923046_1920x1080.jpg',
+    title: 'Image 4 title',
+  },
 ];
 
 let currentImage = 0;
 
 function renderImage() {
-  const imageURL = 'images/' + imagesArray[currentImage];
+  const imageObject = imagesArray[currentImage];
+  console.log('imageObject', imageObject);
+
+  const imageURL = 'images/' + imageObject.imageURL;
   document.getElementById('slider-image').src = imageURL;
+
+  document.getElementById('image-title').innerHTML = imageObject.title;
 }
 
 function prevImage() {

@@ -24,3 +24,6 @@ Which give us undesireable results.
 Use clear interval to stop the slide show
 
 # Step 16 - Add mouseenter and mouseleave to start or stop the slideshow
+
+# step 17 - Use object in imagesArray
+in order to display the titles of the images we put them in object 
