@@ -12,3 +12,6 @@ Make the buttons change the image
 # Step 12 - slider is working
 Prev and Next button change the image according to the image array
 We dealt when we exceed the array size or going beneath it
+
+# Step 13 - Auto image cycle 
+add button to run the setInterval function

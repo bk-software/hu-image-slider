@@ -31,5 +31,12 @@ function nextImage() {
   renderImage();
 }
 
+function autoSlideShow() {
+  setInterval(function () {
+    nextImage();
+  }, 1000);
+}
+
 document.getElementById('prev').addEventListener('click', prevImage);
 document.getElementById('next').addEventListener('click', nextImage);
+document.getElementById('auto-run').addEventListener('click', autoSlideShow);
