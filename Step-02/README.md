@@ -15,3 +15,7 @@ We dealt when we exceed the array size or going beneath it
 
 # Step 13 - Auto image cycle 
 add button to run the setInterval function
+
+# Step 14 - Bugfix run slide show only one time 
+When pressing auto run button we call function autoSlideShow multiple times.
+Which give us undesireable results.

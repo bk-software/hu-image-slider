@@ -27,14 +27,22 @@ function nextImage() {
     currentImage = 0;
   }
 
-  console.log('next currentImage', currentImage);
+  //console.log('next currentImage', currentImage);
   renderImage();
 }
 
+let interval = null;
+
 function autoSlideShow() {
-  setInterval(function () {
+  if (interval != null) {
+    return;
+  }
+
+  interval = setInterval(function () {
     nextImage();
   }, 1000);
+
+  console.log('interval', interval);
 }
 
 document.getElementById('prev').addEventListener('click', prevImage);
