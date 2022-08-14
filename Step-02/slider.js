@@ -33,11 +33,15 @@ function nextImage() {
 
 let interval = null;
 
+/*
+  The function automatic change the images
+*/
 function autoSlideShow() {
   if (interval != null) {
     return;
   }
 
+  // This code will run only if the interval variable is null
   interval = setInterval(function () {
     nextImage();
   }, 1000);
@@ -45,6 +49,17 @@ function autoSlideShow() {
   console.log('interval', interval);
 }
 
+/*
+The Function stop the slide show images
+*/
+function stopSlideShow() {
+  clearInterval(interval);
+  //Set the interval to null so we can run autoSlideShow again
+  interval = null;
+  console.log('stopSlideShow interval', interval);
+}
+
 document.getElementById('prev').addEventListener('click', prevImage);
 document.getElementById('next').addEventListener('click', nextImage);
 document.getElementById('auto-run').addEventListener('click', autoSlideShow);
+document.getElementById('stop-run').addEventListener('click', stopSlideShow);
