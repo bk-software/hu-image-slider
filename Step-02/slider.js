@@ -5,17 +5,30 @@ const imagesArray = [
   'OHR.SpiralHill_ROW7328923046_1920x1080.jpg',
 ];
 
-function renderImage(imageNumber) {
-  const imageURL = 'images/' + imagesArray[imageNumber];
+let currentImage = 0;
+
+function renderImage() {
+  const imageURL = 'images/' + imagesArray[currentImage];
   document.getElementById('slider-image').src = imageURL;
 }
 
 function prevImage() {
-  renderImage(0);
+  currentImage--;
+  if (currentImage < 0) {
+    currentImage = imagesArray.length - 1;
+  }
+  console.log('prev currentImage', currentImage);
+  renderImage();
 }
 
 function nextImage() {
-  renderImage(1);
+  currentImage++;
+  if (currentImage > imagesArray.length - 1) {
+    currentImage = 0;
+  }
+
+  console.log('next currentImage', currentImage);
+  renderImage();
 }
 
 document.getElementById('prev').addEventListener('click', prevImage);
