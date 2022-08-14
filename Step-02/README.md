@@ -22,3 +22,5 @@ Which give us undesireable results.
 
 # Step 15 - Add button to stop the slideshow
 Use clear interval to stop the slide show
+
+# Step 16 - Add mouseenter and mouseleave to start or stop the slideshow

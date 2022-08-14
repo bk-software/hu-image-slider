@@ -63,3 +63,11 @@ document.getElementById('prev').addEventListener('click', prevImage);
 document.getElementById('next').addEventListener('click', nextImage);
 document.getElementById('auto-run').addEventListener('click', autoSlideShow);
 document.getElementById('stop-run').addEventListener('click', stopSlideShow);
+
+document
+  .getElementById('slider-image')
+  .addEventListener('mouseenter', stopSlideShow);
+
+document
+  .getElementById('slider-image')
+  .addEventListener('mouseleave', autoSlideShow);
