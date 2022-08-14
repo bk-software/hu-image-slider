@@ -10,18 +10,24 @@
   <script>
     const a = 5; //number
     const word = 'word'; //string
-    const values = [1, 2, 3, 4, 5]; // array
+    const arr = [1, 2, 3, 4, 5]; // array
     const image = { // object
       title: 'This is the image title',
       imageLink: 'images/image1.jpeg',
       size: 34,
     }
 
+
+    
     // how to read and object
     // console.log('title:', image.title);
     // console.log('imageLink:', image.imageLink);
     // console.log('size:', image.size);
     // console.log('obj:', image);
+
+    // image.title = 'My new Title';
+    // console.log('title:', image.title);
+
 
 
     // next way to read and object
@@ -29,6 +35,9 @@
     console.log('imageLink:', image['imageLink']);
     console.log('size:', image['size']);
     console.log('obj:', image);
+
+    image['title'] = 'New title';
+    console.log('title:', image['title']);
   
   </script>
 </body>
