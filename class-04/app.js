@@ -1,6 +1,6 @@
 let currentPageId = 'home-page';
 
-function showPageByPageId(pageIdToShow) {
+function showPageByPageId(linkId, pageIdToShow) {
   console.log('you clicked me');
   if (currentPageId == pageIdToShow) {
     return;
@@ -14,13 +14,15 @@ function showPageByPageId(pageIdToShow) {
   // Hide the page
   document.getElementById(currentPageId).classList.add('d-none');
 
+  document.getElementById(linkId).classList.add('active');
+
   currentPageId = pageIdToShow;
 }
 
 function makeMenuLinkChangePage(linkId, pageToShow) {
   const pageLinkElement = document.getElementById(linkId);
   pageLinkElement.addEventListener('click', function () {
-    showPageByPageId(pageToShow);
+    showPageByPageId(linkId, pageToShow);
   });
 }
 

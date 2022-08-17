@@ -1,3 +1,7 @@
 img {
   width: 400px;
 }
+
+.active {
+  color: red !important;
+}
