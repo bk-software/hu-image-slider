@@ -1,4 +1,5 @@
 let currentPageId = 'home-page';
+let currentActiveLinkId = 'home-page-link';
 
 function showPageByPageId(linkId, pageIdToShow) {
   console.log('you clicked me');
@@ -15,8 +16,10 @@ function showPageByPageId(linkId, pageIdToShow) {
   document.getElementById(currentPageId).classList.add('d-none');
 
   document.getElementById(linkId).classList.add('active');
+  document.getElementById(currentActiveLinkId).classList.remove('active');
 
   currentPageId = pageIdToShow;
+  currentActiveLinkId = linkId;
 }
 
 function makeMenuLinkChangePage(linkId, pageToShow) {

@@ -5,3 +5,5 @@ auto run and stop run
 move the buttons elements to a variable
 
 # step 20 - add active class to pressed link
+
+# step 21 - remove active class from previous currentActiveLink 
