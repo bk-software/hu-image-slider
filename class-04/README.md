@@ -13,3 +13,5 @@ move the buttons elements to a variable
 # step 23 - add flex classes for alignment of the page
 
 # step 24 - butify buttons and add icons
+
+# step 25 - add javascript object with description credits and more
