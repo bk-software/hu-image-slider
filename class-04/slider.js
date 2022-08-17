@@ -64,6 +64,8 @@ function autoSlideShow() {
     nextImage();
   }, 1000);
 
+  document.getElementById('auto-run').classList.add('d-none');
+  document.getElementById('stop-run').classList.remove('d-none');
   console.log('interval', interval);
 }
 
@@ -73,6 +75,8 @@ The Function stop the slide show images
 function stopSlideShow() {
   clearInterval(interval);
   //Set the interval to null so we can run autoSlideShow again
+  document.getElementById('auto-run').classList.remove('d-none');
+  document.getElementById('stop-run').classList.add('d-none');
   interval = null;
   console.log('stopSlideShow interval', interval);
 }
@@ -82,10 +86,10 @@ document.getElementById('next').addEventListener('click', nextImage);
 document.getElementById('auto-run').addEventListener('click', autoSlideShow);
 document.getElementById('stop-run').addEventListener('click', stopSlideShow);
 
-document
-  .getElementById('slider-image')
-  .addEventListener('mouseenter', stopSlideShow);
+// document
+//   .getElementById('slider-image')
+//   .addEventListener('mouseenter', stopSlideShow);
 
-document
-  .getElementById('slider-image')
-  .addEventListener('mouseleave', autoSlideShow);
+// document
+//   .getElementById('slider-image')
+//   .addEventListener('mouseleave', autoSlideShow);
