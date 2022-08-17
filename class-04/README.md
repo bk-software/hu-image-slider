@@ -15,3 +15,4 @@ move the buttons elements to a variable
 # step 24 - butify buttons and add icons
 
 # step 25 - add javascript object with description credits and more
+# step 25 - add image description, credits and featured to the page

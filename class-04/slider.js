@@ -36,10 +36,18 @@ const imagesArray = [
 
 let currentImage = 0;
 
+//Buttons
 const autoRunButton = document.getElementById('auto-run');
 const stopRunButton = document.getElementById('stop-run');
 const nextButton = document.getElementById('next');
 const prevButton = document.getElementById('prev');
+
+//Image elements
+const imageTitle = document.getElementById('image-title');
+const sliderImage = document.getElementById('slider-image');
+const imageDescription = document.getElementById('image-description');
+const imageCredits = document.getElementById('image-credits');
+const imageFeatured = document.getElementById('image-featured');
 
 const baseUrl = 'images/';
 
@@ -48,9 +56,12 @@ function renderImage() {
   console.log('imageObject', imageObject);
 
   const imageURL = baseUrl + imageObject.imageURL;
-  document.getElementById('slider-image').src = imageURL;
+  sliderImage.src = imageURL;
 
-  document.getElementById('image-title').innerHTML = imageObject.title;
+  imageTitle.innerHTML = imageObject.title;
+  imageDescription.innerHTML = imageObject.description;
+  imageCredits.innerHTML = imageObject.credits;
+  imageFeatured.innerHTML = imageObject.featured;
 }
 
 function prevImage() {
