@@ -11,3 +11,5 @@ move the buttons elements to a variable
 # step 22 - add baseUrl variable to image path
 
 # step 23 - add flex classes for alignment of the page
+
+# step 24 - butify buttons and add icons
