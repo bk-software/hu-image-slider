@@ -17,3 +17,7 @@ move the buttons elements to a variable
 # step 25 - add javascript object with description credits and more
 # step 25 - add image description, credits and featured to the page
 # step 26 - run renderImage at loading of the project to insert to first picture
+# step 27 - change how mouseEnter and mouseLeave work
+- When the slide is not running mouseEnter and mouseLeave does not effect the slide show
+- When the slide is run mouseEnter and mouseLeave stop and run the slide show
+- The buttons don't change

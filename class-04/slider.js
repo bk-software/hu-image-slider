@@ -53,7 +53,7 @@ const baseUrl = 'images/';
 
 function renderImage() {
   const imageObject = imagesArray[currentImage];
-  console.log('imageObject', imageObject);
+  //console.log('imageObject', imageObject);
 
   const imageURL = baseUrl + imageObject.imageURL;
   sliderImage.src = imageURL;
@@ -84,6 +84,7 @@ function nextImage() {
 }
 
 let interval = null;
+let isSlideShowRunning = false;
 
 /*
   The function automatic change the images
@@ -101,6 +102,7 @@ function autoSlideShow() {
   autoRunButton.classList.add('d-none');
   stopRunButton.classList.remove('d-none');
   console.log('interval', interval);
+  isSlideShowRunning = true;
 }
 
 /*
@@ -112,6 +114,7 @@ function stopSlideShow() {
   autoRunButton.classList.remove('d-none');
   stopRunButton.classList.add('d-none');
   interval = null;
+  isSlideShowRunning = false;
   console.log('stopSlideShow interval', interval);
 }
 
@@ -120,12 +123,34 @@ nextButton.addEventListener('click', nextImage);
 autoRunButton.addEventListener('click', autoSlideShow);
 stopRunButton.addEventListener('click', stopSlideShow);
 
-// document
-//   .getElementById('slider-image')
-//   .addEventListener('mouseenter', stopSlideShow);
+function mouseStartSlideShow() {
+  if (isSlideShowRunning == false) {
+    return;
+  }
 
-// document
-//   .getElementById('slider-image')
-//   .addEventListener('mouseleave', autoSlideShow);
+  interval = setInterval(function () {
+    nextImage();
+  }, 1000);
+
+  console.log('mouseStartSlideShow slide show is running');
+}
+
+function mouseStopSlideShow() {
+  if (isSlideShowRunning == false) {
+    return;
+  }
+  // this code will work only if the slide show is working
+  clearInterval(interval);
+
+  console.log('mouseStopSlideShow slide show is running');
+}
+
+document
+  .getElementById('slider-image')
+  .addEventListener('mouseenter', mouseStopSlideShow);
+
+document
+  .getElementById('slider-image')
+  .addEventListener('mouseleave', mouseStartSlideShow);
 
 renderImage();
