@@ -20,6 +20,11 @@ const imagesArray = [
 
 let currentImage = 0;
 
+const autoRunButton = document.getElementById('auto-run');
+const stopRunButton = document.getElementById('stop-run');
+const nextButton = document.getElementById('next');
+const prevButton = document.getElementById('prev');
+
 function renderImage() {
   const imageObject = imagesArray[currentImage];
   console.log('imageObject', imageObject);
@@ -64,8 +69,8 @@ function autoSlideShow() {
     nextImage();
   }, 1000);
 
-  document.getElementById('auto-run').classList.add('d-none');
-  document.getElementById('stop-run').classList.remove('d-none');
+  autoRunButton.classList.add('d-none');
+  stopRunButton.classList.remove('d-none');
   console.log('interval', interval);
 }
 
@@ -75,16 +80,16 @@ The Function stop the slide show images
 function stopSlideShow() {
   clearInterval(interval);
   //Set the interval to null so we can run autoSlideShow again
-  document.getElementById('auto-run').classList.remove('d-none');
-  document.getElementById('stop-run').classList.add('d-none');
+  autoRunButton.classList.remove('d-none');
+  stopRunButton.classList.add('d-none');
   interval = null;
   console.log('stopSlideShow interval', interval);
 }
 
-document.getElementById('prev').addEventListener('click', prevImage);
-document.getElementById('next').addEventListener('click', nextImage);
-document.getElementById('auto-run').addEventListener('click', autoSlideShow);
-document.getElementById('stop-run').addEventListener('click', stopSlideShow);
+prevButton.addEventListener('click', prevImage);
+nextButton.addEventListener('click', nextImage);
+autoRunButton.addEventListener('click', autoSlideShow);
+stopRunButton.addEventListener('click', stopSlideShow);
 
 // document
 //   .getElementById('slider-image')
