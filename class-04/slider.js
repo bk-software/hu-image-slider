@@ -127,3 +127,5 @@ stopRunButton.addEventListener('click', stopSlideShow);
 // document
 //   .getElementById('slider-image')
 //   .addEventListener('mouseleave', autoSlideShow);
+
+renderImage();

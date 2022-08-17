@@ -16,3 +16,4 @@ move the buttons elements to a variable
 
 # step 25 - add javascript object with description credits and more
 # step 25 - add image description, credits and featured to the page
+# step 26 - run renderImage at loading of the project to insert to first picture
