@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const a = 5; //number
+    const word = 'word'; //string
+    const arr = [1, 2, 3, 4, 5]; // array
+    const image = { // object
+      title: 'This is the image title',
+      imageLink: 'images/image1.jpeg',
+      size: 34,
+    }
+
+
+    
+    // how to read and object
+    console.log('title:', image.title);
+    console.log('imageLink:', image.imageLink);
+    console.log('size:', image.size);
+    console.log('obj:', image);
+
+    image.title = 'My new Title';
+    console.log('title:', image.title);
+
+
+
+    // next way to read and object
+    console.log('title:', image['title']);
+    console.log('imageLink:', image['imageLink']);
+    console.log('size:', image['size']);
+    console.log('obj:', image);
+
+    image['title'] = 'New title';
+    console.log('title:', image['title']);
+  
+  </script>
+</body>
+</html>
